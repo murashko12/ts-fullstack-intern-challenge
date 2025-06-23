@@ -60,7 +60,8 @@ const AllCatsPage = () => {
                 ) : cats.length > 0 ? (
                     cats.map((cat) => (
                         <CatCard
-                            key={cat.id} 
+                            key={cat.id}
+                            id={cat.id} 
                             url={cat.url}
                         />
                     ))
