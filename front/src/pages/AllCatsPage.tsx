@@ -17,7 +17,7 @@ const AllCatsPage = () => {
                 `https://api.thecatapi.com/v1/images/search?limit=15&page=${page}`,
                 {
                     headers: {
-                        "x-api-key": "live_e5Uk7H2oOKJ1XjigXIXa6y5XUe5XemLYvRQV7IWj0vfbKbFfmRk8vepsGdgg6iXr",
+                        "x-api-key": import.meta.env.VITE_CAT_API_KEY,
                     },
                     timeout: 10000
                 }
