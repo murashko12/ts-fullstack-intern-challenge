@@ -57,7 +57,7 @@ const AllCatsPage = () => {
             <div className="grid grid-cols-[repeat(5,minmax(0,1fr))] gap-[52px]">
                 {error ? (
                     <p className="text-red-500 col-span-full">{error}</p>
-                ) : cats.length > 0 ? (
+                ) : cats.length > 0 && (
                     cats.map((cat) => (
                         <CatCard
                             key={cat.id}
@@ -65,8 +65,6 @@ const AllCatsPage = () => {
                             url={cat.url}
                         />
                     ))
-                ) : (
-                    <p className="col-span-full">Loading cats...</p>
                 )}
             </div>
             
