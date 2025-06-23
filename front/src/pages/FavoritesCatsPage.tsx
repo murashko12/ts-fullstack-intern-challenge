@@ -32,7 +32,7 @@ const FavoritesCatsPage = () => {
       {error ? (
         <p className="text-red-500">{error}</p>
       ) : cats.length > 0 ? (
-        <>{JSON.stringify(cats[0].id)}</>
+        <>{JSON.stringify(cats[0])}</>
         // cats
         // .map((cat) => (
         //   <img

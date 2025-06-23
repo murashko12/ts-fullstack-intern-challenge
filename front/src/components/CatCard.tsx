@@ -1,19 +1,16 @@
 import '../assets/cat1.png' 
-const CatCard = ({id, }) => {
+
+interface IProps {
+  key: string
+  url: string
+}
+const CatCard = ({key, url}: IProps) => {
     return (
-        <div className="
-            w-[225px] h-[225px] 
-            bg-[url(src/assets/cat1.png)] 
-            bg-cover
-            shadow 
-            transition-all 
-            duration-300 
-            hover:w-[257px] hover:h-[256px] 
-            hover:shadow-2xl
-            cursor-pointer
-        ">
-            
-        </div>
+        <div 
+            key={key}
+            className="w-[225px] h-[225px] bg-cover bg-center bg-no-repeat transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-[0_9px_18px_0_rgba(0,0,0,0.18),0_6px_5px_0_rgba(0,0,0,0.24)]"
+            style={{ backgroundImage: `url(${url})` }}
+        />
     )
 }
 
